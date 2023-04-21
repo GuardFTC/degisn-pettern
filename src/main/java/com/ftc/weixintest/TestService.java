@@ -3,6 +3,7 @@ package com.ftc.weixintest;
 import cn.hutool.core.collection.CollUtil;
 import cn.hutool.core.util.StrUtil;
 import cn.hutool.crypto.SecureUtil;
+import org.springframework.stereotype.Service;
 
 import java.util.Collections;
 import java.util.List;
@@ -12,6 +13,7 @@ import java.util.List;
  * @date: 2023-04-21 16:44:18
  * @describe: 测试Service
  */
+@Service
 public class TestService {
 
     /**
