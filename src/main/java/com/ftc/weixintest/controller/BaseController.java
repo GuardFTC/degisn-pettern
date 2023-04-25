@@ -1,9 +1,10 @@
-package com.ftc.weixintest;
+package com.ftc.weixintest.controller;
 
 import cn.hutool.log.StaticLog;
+import com.ftc.weixintest.service.BaseService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -15,11 +16,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("api/v1/rest/wx")
-public class TestController {
+public class BaseController {
 
-    private final TestService testService;
+    private final BaseService baseService;
 
-    @GetMapping("/check-server")
+    @RequestMapping(value = "/check-server", method = {RequestMethod.GET, RequestMethod.POST})
     public String checkToken(@RequestParam String signature,
                              @RequestParam String timestamp,
                              @RequestParam String nonce,
@@ -28,7 +29,7 @@ public class TestController {
                 signature, timestamp, nonce, echostr);
 
         //1.验证
-        String checkStr = testService.checkUrl(signature, timestamp, nonce, echostr);
+        String checkStr = baseService.checkUrl(signature, timestamp, nonce, echostr);
         StaticLog.info("微信公众号接入URL验证接口出参:[{}]", checkStr);
 
         //2.返回

@@ -1,4 +1,4 @@
-package com.ftc.weixintest;
+package com.ftc.weixintest.service;
 
 import cn.hutool.core.collection.CollUtil;
 import cn.hutool.core.util.StrUtil;
@@ -14,7 +14,7 @@ import java.util.List;
  * @describe: 测试Service
  */
 @Service
-public class TestService {
+public class BaseService {
 
     /**
      * 默认TOKEN
