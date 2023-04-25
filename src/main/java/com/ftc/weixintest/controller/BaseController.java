@@ -3,10 +3,7 @@ package com.ftc.weixintest.controller;
 import cn.hutool.log.StaticLog;
 import com.ftc.weixintest.service.BaseService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * @author: 冯铁城 [17615007230@163.com]
@@ -15,12 +12,12 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("api/v1/rest/wx")
+@RequestMapping("api/v1/rest/wechat")
 public class BaseController {
 
     private final BaseService baseService;
 
-    @RequestMapping(value = "/check-server", method = {RequestMethod.GET, RequestMethod.POST})
+    @GetMapping
     public String checkToken(@RequestParam String signature,
                              @RequestParam String timestamp,
                              @RequestParam String nonce,
@@ -34,5 +31,17 @@ public class BaseController {
 
         //2.返回
         return checkStr;
+    }
+
+    @PostMapping
+    public String receiveMessage(@RequestParam String signature,
+                                 @RequestParam String timestamp,
+                                 @RequestParam String nonce,
+                                 @RequestBody String msgStr) {
+
+        StaticLog.info("接收微信服务器推送消息入参 signature=[{}],timestamp=[{}],nonce=[{}],msgStr=[{}]",
+                signature, timestamp, nonce, msgStr);
+
+        return "";
     }
 }
