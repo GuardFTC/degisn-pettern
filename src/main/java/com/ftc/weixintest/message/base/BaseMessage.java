@@ -1,9 +1,8 @@
 package com.ftc.weixintest.message.base;
 
-import com.thoughtworks.xstream.annotations.XStreamAlias;
 import lombok.Data;
 
-import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.*;
 
 /**
  * @author: 冯铁城 [17615007230@163.com]
@@ -11,7 +10,9 @@ import javax.xml.bind.annotation.XmlElement;
  * @describe: 基础Message类
  */
 @Data
-@XStreamAlias("xml")
+@XmlRootElement(name = "xml")
+@XmlAccessorType(value = XmlAccessType.FIELD)
+@XmlType(propOrder = {"toUserName", "fromUserName", "createTime", "msgType"})
 public class BaseMessage {
 
     /**
@@ -23,18 +24,18 @@ public class BaseMessage {
     /**
      * 发送方帐号（一个OpenID）
      */
-    @XmlElement(name = "ToUserName")
+    @XmlElement(name = "FromUserName")
     private String fromUserName;
 
     /**
      * 消息创建时间 （整型）
      */
-    @XmlElement(name = "ToUserName")
+    @XmlElement(name = "CreateTime")
     private int createTime;
 
     /**
      * 消息类型
      */
-    @XmlElement(name = "ToUserName")
+    @XmlElement(name = "MsgType")
     private String msgType;
 }

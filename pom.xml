@@ -41,18 +41,6 @@
             <version>5.8.16</version>
         </dependency>
 
-        <!--XML操作依赖-->
-        <dependency>
-            <groupId>com.fasterxml.jackson.dataformat</groupId>
-            <artifactId>jackson-dataformat-xml</artifactId>
-            <version>2.14.2</version>
-        </dependency>
-        <dependency>
-            <groupId>com.thoughtworks.xstream</groupId>
-            <artifactId>xstream</artifactId>
-            <version>1.4.20</version>
-        </dependency>
-
         <!--单元测试依赖-->
         <dependency>
             <groupId>org.springframework.boot</groupId>

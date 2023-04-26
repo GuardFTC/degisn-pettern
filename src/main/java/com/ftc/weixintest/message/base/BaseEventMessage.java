@@ -1,9 +1,8 @@
 package com.ftc.weixintest.message.base;
 
-import com.thoughtworks.xstream.annotations.XStreamAlias;
 import lombok.Data;
 
-import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.*;
 
 /**
  * @author: 冯铁城 [17615007230@163.com]
@@ -11,18 +10,15 @@ import javax.xml.bind.annotation.XmlElement;
  * @describe: 菜单点击触发事件基础Message类
  */
 @Data
-@XStreamAlias("xml")
-public class BaseMenuMessage extends BaseMessage {
+@XmlRootElement(name = "xml")
+@XmlAccessorType(value = XmlAccessType.FIELD)
+@XmlSeeAlso({BaseEventMessage.class})
+@XmlType(propOrder = {"event"})
+public class BaseEventMessage extends BaseMessage {
 
     /**
      * 事件类型
      */
     @XmlElement(name = "Event")
     private String event;
-
-    /**
-     * 事件Key
-     */
-    @XmlElement(name = "EventKey")
-    private String eventKey;
 }

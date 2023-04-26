@@ -2,6 +2,7 @@ package com.ftc.weixintest.controller;
 
 import cn.hutool.log.StaticLog;
 import com.ftc.weixintest.service.BaseService;
+import com.ftc.weixintest.service.MessageService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
@@ -16,6 +17,8 @@ import org.springframework.web.bind.annotation.*;
 public class BaseController {
 
     private final BaseService baseService;
+
+    private final MessageService messageService;
 
     @GetMapping
     public String checkToken(@RequestParam String signature,
@@ -38,10 +41,14 @@ public class BaseController {
                                  @RequestParam String timestamp,
                                  @RequestParam String nonce,
                                  @RequestBody String msgStr) {
-
-        StaticLog.info("接收微信服务器推送消息入参 signature=[{}],timestamp=[{}],nonce=[{}],msgStr=[{}]",
+        StaticLog.info("接收微信服务器推送消息接口入参 signature=[{}],timestamp=[{}],nonce=[{}],msgStr=[{}]",
                 signature, timestamp, nonce, msgStr);
 
-        return "";
+        //1.处理消息
+        String responseMessage = messageService.processMessage(signature, timestamp, nonce, msgStr);
+        StaticLog.info("接收微信服务器推送消息接口出参 responseMessage=[{}]", responseMessage);
+
+        //2.返回
+        return responseMessage;
     }
 }
