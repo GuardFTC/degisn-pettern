@@ -6,11 +6,11 @@ import lombok.Getter;
 /**
  * @author: 冯铁城 [17615007230@163.com]
  * @date: 2023-04-26 14:00:27
- * @describe: 微信公众号回复消息枚举类型
+ * @describe: 微信公众号接收普通消息枚举类型
  */
 @Getter
 @AllArgsConstructor
-public enum ResponseMsgTypeEnum {
+public enum ReceiveMsgTypeEnum {
 
     /**
      * 文本消息
@@ -33,18 +33,28 @@ public enum ResponseMsgTypeEnum {
     MESSAGE_VIDEO("video"),
 
     /**
-     * 音乐消息
+     * 短视频消息
      */
-    MESSAGE_MUSIC("music"),
+    MESSAGE_SHORT_VIDEO("shortvideo"),
 
     /**
-     * 图文消息
+     * 地理位置消息
      */
-    MESSAGE_NEWS("news"),
+    MESSAGE_LOCATION("location"),
+
+    /**
+     * 链接消息
+     */
+    MESSAGE_LINK("link"),
+
+    /**
+     * 事件消息
+     */
+    MESSAGE_EVENT("event"),
     ;
 
     /**
-     * 响应消息类型
+     * 接收消息类型
      */
     private final String type;
 }

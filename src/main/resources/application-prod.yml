@@ -1,0 +1,6 @@
+#公众号相关配置
+wechat:
+  token: ftcctv
+  subscribe-message: "欢迎关注中投生态圈公众号！辛苦点击下方链接:{}，绑定中投生态圈APP，以便后续接收文章推送~"
+  download-app-url: https://ecosys.china-inv.cn/web/download/welcome.html
+  bind-app-url: https://ecosys.china-inv.cn/web/download/welcome.html

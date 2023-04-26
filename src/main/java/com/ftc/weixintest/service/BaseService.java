@@ -3,6 +3,8 @@ package com.ftc.weixintest.service;
 import cn.hutool.core.collection.CollUtil;
 import cn.hutool.core.util.StrUtil;
 import cn.hutool.crypto.SecureUtil;
+import com.ftc.weixintest.common.config.WeChatConfig;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.Collections;
@@ -14,13 +16,10 @@ import java.util.List;
  * @describe: 测试Service
  */
 @Service
+@RequiredArgsConstructor
 public class BaseService {
 
-    /**
-     * 默认TOKEN
-     * TODO 后续将TOKEN写入配置
-     */
-    private static final String TOKEN = "ftcctv";
+    private final WeChatConfig weChatConfig;
 
     /**
      * 校验服务器URL
@@ -51,7 +50,7 @@ public class BaseService {
     protected boolean checkWeChatMessage(String signature, String timestamp, String nonce) {
 
         //1.参数排序
-        List<String> params = CollUtil.newArrayList(TOKEN, timestamp, nonce);
+        List<String> params = CollUtil.newArrayList(weChatConfig.getToken(), timestamp, nonce);
         Collections.sort(params);
 
         //2.拼接为一个字符串

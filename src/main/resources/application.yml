@@ -1,2 +1,10 @@
+#服务器配置
 server:
   port: 80
+
+#spring配置
+spring:
+
+  #指定激活文件
+  profiles:
+    active: dev

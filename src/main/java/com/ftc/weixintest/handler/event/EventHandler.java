@@ -2,6 +2,7 @@ package com.ftc.weixintest.handler.event;
 
 import cn.hutool.core.util.ObjectUtil;
 import cn.hutool.core.util.StrUtil;
+import com.ftc.weixintest.common.enums.ReceiveMsgTypeEnum;
 import com.ftc.weixintest.common.util.XmlUtil;
 import com.ftc.weixintest.handler.IMessageHandler;
 import com.ftc.weixintest.message.base.BaseEventMessage;
@@ -18,7 +19,7 @@ public class EventHandler implements IMessageHandler {
 
     @Override
     public String getType() {
-        return "event";
+        return ReceiveMsgTypeEnum.MESSAGE_EVENT.getType();
     }
 
     @Override
