@@ -1,4 +1,4 @@
-package com.ftc.weixintest.message.menu;
+package com.ftc.weixintest.message.event;
 
 import com.ftc.weixintest.message.base.BaseEventMessage;
 import lombok.Data;

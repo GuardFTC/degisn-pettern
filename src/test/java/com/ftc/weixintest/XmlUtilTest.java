@@ -5,7 +5,7 @@ import cn.hutool.core.util.ObjectUtil;
 import com.ftc.weixintest.common.util.XmlUtil;
 import com.ftc.weixintest.message.base.BaseEventMessage;
 import com.ftc.weixintest.message.base.BaseMessage;
-import com.ftc.weixintest.message.menu.SubscribeEventMessage;
+import com.ftc.weixintest.message.event.SubscribeEventMessage;
 import org.junit.jupiter.api.Test;
 
 /**
