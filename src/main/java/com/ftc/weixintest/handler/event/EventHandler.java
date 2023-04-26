@@ -26,6 +26,9 @@ public class EventHandler implements IMessageHandler {
 
         //1.XML转Java Bean
         BaseEventMessage baseEventMessage = (BaseEventMessage) XmlUtil.xmlToBean(msgStr, BaseMessage.class, BaseEventMessage.class);
+        if (ObjectUtil.isNull(baseEventMessage)) {
+            return StrUtil.EMPTY;
+        }
 
         //2.根据消息类型获取对应处理器  TODO 后续异常情况抛出自定义异常
         IEventHandler eventHandler = EventHandlerFactory.getEventHandler(baseEventMessage.getEvent());

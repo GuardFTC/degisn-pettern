@@ -31,7 +31,7 @@ public class BaseMessage {
      * 消息创建时间 （整型）
      */
     @XmlElement(name = "CreateTime")
-    private int createTime;
+    private long createTime;
 
     /**
      * 消息类型
