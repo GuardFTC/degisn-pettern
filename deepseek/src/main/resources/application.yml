@@ -1,4 +1,0 @@
-deepseek:
-  api-key: sk-795ac827610d4773a21395972b4bb739
-  base-url: https://api.deepseek.com
-  model: deepseek-chat
