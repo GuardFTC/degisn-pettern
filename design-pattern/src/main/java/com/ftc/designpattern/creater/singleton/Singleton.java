@@ -1,4 +1,4 @@
-package com.ftc.designpattern.creater;
+package com.ftc.designpattern.creater.singleton;
 
 /**
  * @author: 冯铁城 [17615007230@163.com]
