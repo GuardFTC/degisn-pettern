@@ -1,5 +1,6 @@
 package com.ftc.designpattern.creater.builder;
 
+import cn.hutool.core.util.StrUtil;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
@@ -38,6 +39,6 @@ class Computer1 {
     private String graphicsBoard;
 
     public void print() {
-        System.out.println(STR."Computer{cpu='\{cpu}', disk='\{disk}', graphicsBoard='\{graphicsBoard}'}");
+        System.out.println(StrUtil.format("Computer{cpu='\\{}', disk='\\{}', graphicsBoard='\\{}'}", cpu, disk, graphicsBoard));
     }
 }

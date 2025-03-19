@@ -1,5 +1,6 @@
 package com.ftc.designpattern.creater.builder;
 
+import cn.hutool.core.util.StrUtil;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -121,7 +122,7 @@ class Car {
     private String color;
 
     public void print() {
-        System.out.println(STR."Car{brand='\{brand}', engine='\{engine}', color='\{color}'}");
+        System.out.println(StrUtil.format("Car{brand='\\{}', engine='\\{}', color='\\{}'}", brand, engine, color));
     }
 }
 
