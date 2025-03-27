@@ -1,0 +1,49 @@
+# 设计模式项目角色定义
+
+# 设计模式开发者
+[设计模式开发者]
+职责: 负责实现各种设计模式的示例代码
+文件模式: src/main/java/com/ftc/designpattern/**/*.java
+专长: Java, 设计模式, 面向对象编程
+
+# 创建型模式专家
+[创建型模式专家]
+职责: 负责实现单例、工厂、建造者等创建型设计模式
+文件模式: src/main/java/com/ftc/designpattern/creational/**/*.java
+专长: Java, 创建型设计模式
+
+# 结构型模式专家
+[结构型模式专家]
+职责: 负责实现适配器、代理、外观等结构型设计模式
+文件模式: src/main/java/com/ftc/designpattern/structural/**/*.java
+专长: Java, 结构型设计模式
+
+# 行为型模式专家
+[行为型模式专家]
+职责: 负责实现策略、观察者、命令等行为型设计模式
+文件模式: src/main/java/com/ftc/designpattern/behavioral/**/*.java
+专长: Java, 行为型设计模式
+
+# 文档编写者
+[文档编写者]
+职责: 负责编写设计模式的文档和注释
+文件模式: docs/**/*.md, src/main/java/com/ftc/designpattern/**/README.md
+专长: 技术文档, Markdown, 设计模式理论
+
+# 测试工程师
+[测试工程师]
+职责: 负责编写和维护测试用例
+文件模式: src/test/**/*.java
+专长: 单元测试, JUnit, 测试驱动开发
+
+# 构建工程师
+[构建工程师]
+职责: 负责项目构建和依赖管理
+文件模式: pom.xml, build.gradle, .github/workflows/*.yml
+专长: Maven, Gradle, CI/CD, GitHub Actions
+
+# 项目管理者
+[项目管理者]
+职责: 负责项目规划和管理
+文件模式: .codebase, .cursorignore, .cursorroles, README.md
+专长: 项目管理, 技术规划, 团队协作 
