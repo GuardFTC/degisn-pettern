@@ -1,0 +1,41 @@
+# 项目名称
+项目名称: 设计模式测试项目
+
+# 项目描述
+描述: 这是一个用于学习和测试各种设计模式的Java项目，特别关注适配器模式等结构型设计模式。
+
+# 目录结构
+目录结构:
+- src/main/java/: Java源代码目录
+- src/main/resources/: 资源文件目录
+- src/test/: 测试代码目录
+
+# 主要依赖
+依赖:
+- Java 8+
+- Maven
+
+# 运行方式
+运行步骤:
+1. 每个设计模式示例都有对应的main方法
+2. 直接运行对应的main方法来测试设计模式实现
+
+# 设计模式列表
+已实现的设计模式:
+- 创建型模式
+  - 单例模式 (Singleton Pattern)
+  - 工厂方法模式 (Factory Method Pattern)
+  - 抽象工厂模式 (Abstract Factory Pattern)
+  - 建造者模式 (Builder Pattern)
+  - 原型模式 (Prototype Pattern)
+- 结构型模式
+  - 适配器模式 (Adapter Pattern)
+    - 类适配器模式 (VoltageAdapterV1)
+    - 对象适配器模式 (VoltageAdapterV2)
+  - 其他结构型模式待实现
+- 行为型模式 (待实现)
+
+# 贡献指南
+贡献:
+- 请在提交代码前确保示例能正确运行
+- 每个设计模式实现应包含必要的注释说明
