@@ -20,6 +20,7 @@ public class ObserverPatternDemo {
 
         //3.通知消息
         wechatPublic.publishMessage("获得本chi大sha一等奖的是-----我为祖国献石油！！！");
+        System.out.println("---------------------------------------------");
 
         //4.移除订阅者
         wechatPublic.removeSubscriber(mdm);
