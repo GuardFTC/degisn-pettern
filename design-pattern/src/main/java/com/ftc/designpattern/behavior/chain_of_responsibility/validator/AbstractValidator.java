@@ -16,17 +16,6 @@ public abstract class AbstractValidator implements Validator {
      */
     private AbstractValidator nextValidator;
 
-    /**
-     * 设置下一个校验器
-     *
-     * @param nextValidator 下一个校验器
-     * @return 校验器自身
-     */
-    public AbstractValidator setNextValidator(AbstractValidator nextValidator) {
-        this.nextValidator = nextValidator;
-        return this;
-    }
-
     @Override
     public void validate(Payload payload) {
 
