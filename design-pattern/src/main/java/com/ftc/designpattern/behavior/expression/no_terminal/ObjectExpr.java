@@ -1,9 +1,9 @@
-package com.ftc.designpattern.behavior.Interpreter.expression.no_terminal;
+package com.ftc.designpattern.behavior.expression.no_terminal;
 
 import cn.hutool.core.util.ObjectUtil;
 import com.alibaba.fastjson2.JSONObject;
-import com.ftc.designpattern.behavior.Interpreter.expression.AbstractExpr;
-import com.ftc.designpattern.behavior.Interpreter.expression.Expression;
+import com.ftc.designpattern.behavior.expression.AbstractExpr;
+import com.ftc.designpattern.behavior.expression.Expression;
 
 import java.util.List;
 

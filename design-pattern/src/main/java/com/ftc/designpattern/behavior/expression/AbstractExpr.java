@@ -1,4 +1,4 @@
-package com.ftc.designpattern.behavior.Interpreter.expression;
+package com.ftc.designpattern.behavior.expression;
 
 import com.alibaba.fastjson2.JSONObject;
 import lombok.AllArgsConstructor;

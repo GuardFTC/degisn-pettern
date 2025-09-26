@@ -1,7 +1,7 @@
-package com.ftc.designpattern.behavior.Interpreter.expression.terminal;
+package com.ftc.designpattern.behavior.expression.terminal;
 
 import cn.hutool.core.util.ObjectUtil;
-import com.ftc.designpattern.behavior.Interpreter.expression.AbstractExpr;
+import com.ftc.designpattern.behavior.expression.AbstractExpr;
 
 import java.math.BigDecimal;
 
