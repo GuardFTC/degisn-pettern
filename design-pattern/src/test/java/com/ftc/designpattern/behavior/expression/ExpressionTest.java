@@ -6,7 +6,7 @@ import com.alibaba.fastjson2.JSONObject;
 import com.ftc.designpattern.behavior.expression.no_terminal.AndExpr;
 import com.ftc.designpattern.behavior.expression.no_terminal.ArrayExpr;
 import com.ftc.designpattern.behavior.expression.no_terminal.ObjectExpr;
-import com.ftc.designpattern.behavior.Interpreter.expression.terminal.*;
+import com.ftc.designpattern.behavior.expression.terminal.*;
 import com.ftc.designpattern.behavior.expression.terminal.*;
 import org.junit.jupiter.api.Test;
 
